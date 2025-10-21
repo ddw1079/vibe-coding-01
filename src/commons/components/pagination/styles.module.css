@@ -1,0 +1,208 @@
+/* Pagination Base Styles */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+/* Page Numbers Container */
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Arrow Button Base */
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.arrowButton:hover:not(.arrowDisabled) {
+  opacity: 0.7;
+}
+
+.arrowDisabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* Page Button Base */
+.pageButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* Size: Small */
+.size-small .arrowButton {
+  width: 20px;
+  height: 20px;
+}
+
+.size-small .pageButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+/* Size: Medium */
+.size-medium .arrowButton {
+  width: 24px;
+  height: 24px;
+}
+
+.size-medium .pageButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+/* Size: Large */
+.size-large .arrowButton {
+  width: 28px;
+  height: 28px;
+}
+
+.size-large .pageButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.18px;
+}
+
+/* ==================== LIGHT THEME ==================== */
+
+/* Light Theme - Primary Variant */
+.theme-light.variant-primary .pageButton {
+  background-color: transparent;
+  color: #777777;
+}
+
+.theme-light.variant-primary .pageButton.pageActive {
+  background-color: #f2f2f2;
+  color: #000000;
+  font-weight: 500;
+}
+
+.theme-light.variant-primary .pageButton:hover:not(.pageActive) {
+  background-color: #fafafa;
+  color: #000000;
+}
+
+/* Light Theme - Secondary Variant */
+.theme-light.variant-secondary .pageButton {
+  background-color: transparent;
+  color: #777777;
+}
+
+.theme-light.variant-secondary .pageButton.pageActive {
+  background-color: #3a5cf3;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.theme-light.variant-secondary .pageButton:hover:not(.pageActive) {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+/* Light Theme - Tertiary Variant */
+.theme-light.variant-tertiary .pageButton {
+  background-color: transparent;
+  color: #777777;
+  border: 1px solid transparent;
+}
+
+.theme-light.variant-tertiary .pageButton.pageActive {
+  background-color: transparent;
+  color: #3a5cf3;
+  border-color: #3a5cf3;
+  font-weight: 500;
+}
+
+.theme-light.variant-tertiary .pageButton:hover:not(.pageActive) {
+  background-color: #fafafa;
+  color: #000000;
+  border-color: #e4e4e4;
+}
+
+/* ==================== DARK THEME ==================== */
+
+/* Dark Theme - Primary Variant */
+.theme-dark.variant-primary .pageButton {
+  background-color: transparent;
+  color: #999999;
+}
+
+.theme-dark.variant-primary .pageButton.pageActive {
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.theme-dark.variant-primary .pageButton:hover:not(.pageActive) {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+/* Dark Theme - Secondary Variant */
+.theme-dark.variant-secondary .pageButton {
+  background-color: transparent;
+  color: #999999;
+}
+
+.theme-dark.variant-secondary .pageButton.pageActive {
+  background-color: #3a5cf3;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.theme-dark.variant-secondary .pageButton:hover:not(.pageActive) {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Dark Theme - Tertiary Variant */
+.theme-dark.variant-tertiary .pageButton {
+  background-color: transparent;
+  color: #999999;
+  border: 1px solid transparent;
+}
+
+.theme-dark.variant-tertiary .pageButton.pageActive {
+  background-color: transparent;
+  color: #3a5cf3;
+  border-color: #3a5cf3;
+  font-weight: 500;
+}
+
+.theme-dark.variant-tertiary .pageButton:hover:not(.pageActive) {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border-color: #333333;
+}
+
