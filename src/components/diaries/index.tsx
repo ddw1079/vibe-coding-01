@@ -5,7 +5,16 @@ import SelectBox from '@/commons/components/selectbox';
 import SearchBar from '@/commons/components/searchbar';
 import Button from '@/commons/components/button';
 import Image from 'next/image';
+import { EmotionType, getEmotionInfo } from '@/commons/constants/enum';
 import styles from './styles.module.css';
+
+// 일기 카드 데이터 타입
+interface DiaryCard {
+  id: number;
+  emotion: EmotionType;
+  date: string;
+  title: string;
+}
 
 export default function Diaries() {
   const [filterValue, setFilterValue] = useState('all');
@@ -21,9 +30,30 @@ export default function Diaries() {
     { value: 'etc', label: '기타' },
   ];
 
+  // Mock 데이터: 일기 카드 목록
+  const diaryCards: DiaryCard[] = [
+    { id: 1, emotion: EmotionType.SAD, date: '2024. 03. 12', title: '타이틀 영역 입니다. 한줄까지만 노출 됩니다.' },
+    { id: 2, emotion: EmotionType.SURPRISE, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 3, emotion: EmotionType.ANGRY, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 4, emotion: EmotionType.HAPPY, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 5, emotion: EmotionType.ETC, date: '2024. 03. 12', title: '타이틀 영역 입니다. 한줄까지만 노출 됩니다.' },
+    { id: 6, emotion: EmotionType.SURPRISE, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 7, emotion: EmotionType.ANGRY, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 8, emotion: EmotionType.HAPPY, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 9, emotion: EmotionType.SAD, date: '2024. 03. 12', title: '타이틀 영역 입니다. 한줄까지만 노출 됩니다.' },
+    { id: 10, emotion: EmotionType.SURPRISE, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 11, emotion: EmotionType.ANGRY, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+    { id: 12, emotion: EmotionType.HAPPY, date: '2024. 03. 12', title: '타이틀 영역 입니다.' },
+  ];
+
   // 일기쓰기 버튼 클릭
   const handleWriteDiary = () => {
     console.log('일기쓰기 클릭');
+  };
+
+  // 카드 삭제 버튼 클릭
+  const handleDeleteCard = (id: number) => {
+    console.log('카드 삭제:', id);
   };
 
   return (
@@ -70,7 +100,46 @@ export default function Diaries() {
       </div>
       <div className={styles.gap42} />
       <div className={styles.main}>
-        <span className={styles.placeholder}>main</span>
+        {diaryCards.map((card) => {
+          const emotionInfo = getEmotionInfo(card.emotion);
+          return (
+            <div key={card.id} className={styles.diaryCard}>
+              <div className={styles.cardImageWrapper}>
+                <Image
+                  src={emotionInfo.imageM}
+                  alt={emotionInfo.displayText}
+                  width={274}
+                  height={208}
+                  className={styles.cardImage}
+                />
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => handleDeleteCard(card.id)}
+                  aria-label="삭제"
+                >
+                  <Image
+                    src="/icons/close_outline_light_m.svg"
+                    alt="close"
+                    width={24}
+                    height={24}
+                  />
+                </button>
+              </div>
+              <div className={styles.cardContent}>
+                <div className={styles.cardHeader}>
+                  <span
+                    className={styles.emotionText}
+                    style={{ color: emotionInfo.color }}
+                  >
+                    {emotionInfo.displayText}
+                  </span>
+                  <span className={styles.dateText}>{card.date}</span>
+                </div>
+                <div className={styles.cardTitle}>{card.title}</div>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className={styles.gap40} />
       <div className={styles.pagination}>

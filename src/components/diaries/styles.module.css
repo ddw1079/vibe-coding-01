@@ -51,12 +51,9 @@
 
 .main {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   width: 1168px;
-  height: 936px;
-  background-color: var(--color-gray-5);
-  border: 1px solid var(--border);
+  gap: 24px;
 }
 
 .gap40 {
@@ -78,5 +75,101 @@
   color: var(--foreground-secondary);
   font-size: 14px;
   font-weight: 500;
+}
+
+/* 일기 카드 */
+.diaryCard {
+  display: flex;
+  flex-direction: column;
+  width: 274px;
+  height: 296px;
+  background-color: var(--background);
+  border-radius: 16px;
+}
+
+/* 카드 이미지 영역 */
+.cardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 274px;
+  height: 208px;
+  position: relative;
+}
+
+.cardImage {
+  width: 274px;
+  height: 208px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* 삭제 버튼 */
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--background);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.deleteButton:hover {
+  opacity: 0.8;
+}
+
+/* 카드 콘텐츠 */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+}
+
+/* 카드 헤더 */
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 258px;
+  height: 24px;
+}
+
+/* 감정 텍스트 */
+.emotionText {
+  font-family: var(--font-family-korean);
+  font-size: var(--font-size-title-03);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title-03);
+}
+
+/* 날짜 텍스트 */
+.dateText {
+  font-family: var(--font-family-korean);
+  font-size: var(--font-size-body-02);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body-02);
+  color: var(--color-gray-50);
+}
+
+/* 카드 타이틀 */
+.cardTitle {
+  width: 258px;
+  height: 24px;
+  font-family: var(--font-family-korean);
+  font-size: var(--font-size-title-01);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title-01);
+  color: var(--foreground);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
