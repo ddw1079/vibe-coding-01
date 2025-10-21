@@ -1,0 +1,247 @@
+/* SearchBar Container Base Styles */
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+
+/* Icon Wrapper */
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.searchIcon {
+  display: block;
+  filter: brightness(0.7);
+}
+
+/* Input Base Styles */
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-medium);
+  color: inherit;
+}
+
+.input::placeholder {
+  color: var(--color-gray-40);
+  opacity: 1;
+}
+
+/* Size Variants */
+.size-small {
+  height: 36px;
+  padding: 0 12px 0 12px;
+}
+
+.size-small .iconWrapper {
+  width: 20px;
+  height: 20px;
+}
+
+.size-small .searchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.size-small .input {
+  font-size: var(--font-size-title-03);
+  line-height: var(--line-height-title-03);
+}
+
+.size-medium {
+  height: 48px;
+  padding: 0 16px 0 16px;
+}
+
+.size-medium .iconWrapper {
+  width: 24px;
+  height: 24px;
+}
+
+.size-medium .searchIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.size-medium .input {
+  font-size: var(--font-size-title-02);
+  line-height: var(--line-height-title-02);
+}
+
+.size-large {
+  height: 56px;
+  padding: 0 20px 0 20px;
+}
+
+.size-large .iconWrapper {
+  width: 28px;
+  height: 28px;
+}
+
+.size-large .searchIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.size-large .input {
+  font-size: var(--font-size-title-01);
+  line-height: var(--line-height-title-01);
+}
+
+/* Theme: Dark - Primary Variant */
+.theme-dark.variant-primary {
+  background-color: var(--color-gray-90);
+  color: var(--color-gray-white);
+  border: 1px solid var(--color-gray-80);
+}
+
+.theme-dark.variant-primary:hover:not(.disabled) {
+  border-color: var(--color-gray-70);
+}
+
+.theme-dark.variant-primary:focus-within:not(.disabled) {
+  border-color: var(--color-blue-40);
+}
+
+.theme-dark.variant-primary .searchIcon {
+  filter: brightness(2);
+}
+
+/* Theme: Dark - Secondary Variant */
+.theme-dark.variant-secondary {
+  background-color: var(--color-gray-80);
+  color: var(--color-gray-white);
+  border: 1px solid var(--color-gray-70);
+}
+
+.theme-dark.variant-secondary:hover:not(.disabled) {
+  border-color: var(--color-gray-60);
+}
+
+.theme-dark.variant-secondary:focus-within:not(.disabled) {
+  border-color: var(--color-blue-40);
+}
+
+.theme-dark.variant-secondary .searchIcon {
+  filter: brightness(2);
+}
+
+/* Theme: Dark - Tertiary Variant */
+.theme-dark.variant-tertiary {
+  background-color: transparent;
+  color: var(--color-gray-white);
+  border: 1px solid var(--color-gray-60);
+}
+
+.theme-dark.variant-tertiary:hover:not(.disabled) {
+  background-color: var(--color-gray-90);
+  border-color: var(--color-gray-40);
+}
+
+.theme-dark.variant-tertiary:focus-within:not(.disabled) {
+  border-color: var(--color-blue-40);
+}
+
+.theme-dark.variant-tertiary .searchIcon {
+  filter: brightness(2);
+}
+
+/* Theme: Light - Primary Variant */
+.theme-light.variant-primary {
+  background-color: var(--color-gray-white);
+  color: var(--color-gray-black);
+  border: 1px solid var(--color-gray-10);
+}
+
+.theme-light.variant-primary:hover:not(.disabled) {
+  border-color: var(--color-gray-20);
+}
+
+.theme-light.variant-primary:focus-within:not(.disabled) {
+  border-color: var(--color-blue-60);
+}
+
+.theme-light.variant-primary .input::placeholder {
+  color: var(--color-gray-40);
+}
+
+/* Theme: Light - Secondary Variant */
+.theme-light.variant-secondary {
+  background-color: var(--color-gray-5);
+  color: var(--color-gray-black);
+  border: 1px solid var(--color-gray-20);
+}
+
+.theme-light.variant-secondary:hover:not(.disabled) {
+  border-color: var(--color-gray-30);
+}
+
+.theme-light.variant-secondary:focus-within:not(.disabled) {
+  border-color: var(--color-blue-60);
+}
+
+.theme-light.variant-secondary .input::placeholder {
+  color: var(--color-gray-40);
+}
+
+/* Theme: Light - Tertiary Variant */
+.theme-light.variant-tertiary {
+  background-color: transparent;
+  color: var(--color-gray-black);
+  border: 1px solid var(--color-gray-30);
+}
+
+.theme-light.variant-tertiary:hover:not(.disabled) {
+  background-color: var(--color-gray-5);
+  border-color: var(--color-gray-40);
+}
+
+.theme-light.variant-tertiary:focus-within:not(.disabled) {
+  border-color: var(--color-blue-60);
+}
+
+.theme-light.variant-tertiary .input::placeholder {
+  color: var(--color-gray-40);
+}
+
+/* Error State */
+.error.theme-dark {
+  border-color: var(--color-red-30);
+}
+
+.error.theme-dark:focus-within {
+  border-color: var(--color-red-30);
+}
+
+.error.theme-light {
+  border-color: var(--color-red-30);
+}
+
+.error.theme-light:focus-within {
+  border-color: var(--color-red-30);
+}
+
+/* Disabled State */
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.disabled .input {
+  cursor: not-allowed;
+}
+
+/* Full Width */
+.fullWidth {
+  width: 100%;
+}
+
