@@ -177,6 +177,94 @@
   --color-info-800: #1530a6;       /* Blue/80 */
   --color-info-900: #0b2184;       /* Blue/90 */
   --color-info-950: #172554;
+
+  /* Typography Variables (피그마 파운데이션 기반) */
+  /* Font Families */
+  --font-family-korean: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-family-english: SUIT Variable, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Font Sizes (Desktop) */
+  --font-size-web-headline-01: 48px;
+  --font-size-web-headline-02: 36px;
+  --font-size-web-headline-03: 28px;
+  --font-size-headline-01: 24px;
+  --font-size-headline-02: 22px;
+  --font-size-headline-03: 20px;
+  --font-size-title-01: 18px;
+  --font-size-title-02: 16px;
+  --font-size-title-03: 14px;
+  --font-size-sub-title-01: 14px;
+  --font-size-sub-title-02: 12px;
+  --font-size-body-01: 16px;
+  --font-size-body-02: 14px;
+  --font-size-body-03: 12px;
+  --font-size-caption-01: 12px;
+  --font-size-caption-02: 10px;
+  --font-size-caption-03: 8px;
+  
+  /* Font Sizes (Mobile) */
+  --font-size-mobile-web-headline-01: 40px;
+  --font-size-mobile-web-headline-02: 32px;
+  --font-size-mobile-web-headline-03: 24px;
+  --font-size-mobile-headline-01: 20px;
+  --font-size-mobile-headline-02: 18px;
+  --font-size-mobile-headline-03: 16px;
+  --font-size-mobile-title-01: 16px;
+  --font-size-mobile-title-02: 14px;
+  --font-size-mobile-title-03: 12px;
+  --font-size-mobile-sub-title-01: 12px;
+  --font-size-mobile-sub-title-02: 10px;
+  --font-size-mobile-body-01: 14px;
+  --font-size-mobile-body-02: 12px;
+  --font-size-mobile-body-03: 10px;
+  --font-size-mobile-caption-01: 10px;
+  --font-size-mobile-caption-02: 8px;
+  --font-size-mobile-caption-03: 6px;
+  
+  /* Line Heights (Desktop) */
+  --line-height-web-headline-01: 60px;
+  --line-height-web-headline-02: 48px;
+  --line-height-web-headline-03: 36px;
+  --line-height-headline-01: 32px;
+  --line-height-headline-02: 30px;
+  --line-height-headline-03: 28px;
+  --line-height-title-01: 24px;
+  --line-height-title-02: 22px;
+  --line-height-title-03: 20px;
+  --line-height-sub-title-01: 22px;
+  --line-height-sub-title-02: 18px;
+  --line-height-body-01: 24px;
+  --line-height-body-02: 22px;
+  --line-height-body-03: 18px;
+  --line-height-caption-01: 14px;
+  --line-height-caption-02: 12px;
+  --line-height-caption-03: 10px;
+  
+  /* Line Heights (Mobile) */
+  --line-height-mobile-web-headline-01: 50px;
+  --line-height-mobile-web-headline-02: 42px;
+  --line-height-mobile-web-headline-03: 32px;
+  --line-height-mobile-headline-01: 28px;
+  --line-height-mobile-headline-02: 26px;
+  --line-height-mobile-headline-03: 24px;
+  --line-height-mobile-title-01: 22px;
+  --line-height-mobile-title-02: 20px;
+  --line-height-mobile-title-03: 18px;
+  --line-height-mobile-sub-title-01: 18px;
+  --line-height-mobile-sub-title-02: 16px;
+  --line-height-mobile-body-01: 22px;
+  --line-height-mobile-body-02: 18px;
+  --line-height-mobile-body-03: 16px;
+  --line-height-mobile-caption-01: 12px;
+  --line-height-mobile-caption-02: 10px;
+  --line-height-mobile-caption-03: 8px;
 }
 
 /* Dark Theme Color Variables */
@@ -232,7 +320,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-korean);
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -303,4 +391,380 @@ body {
   .bg-warning { background-color: var(--color-warning-300); }
   .text-warning { color: var(--color-warning-300); }
   .border-warning { border-color: var(--color-warning-300); }
+  
+  /* Typography utility classes (피그마 기반) */
+  /* Web Headlines */
+  .text-web-headline-01 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-web-headline-01);
+    line-height: var(--line-height-web-headline-01);
+  }
+  .text-web-headline-02 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-web-headline-02);
+    line-height: var(--line-height-web-headline-02);
+  }
+  .text-web-headline-03 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-web-headline-03);
+    line-height: var(--line-height-web-headline-03);
+  }
+  
+  /* Headlines */
+  .text-headline-01 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-headline-01);
+    line-height: var(--line-height-headline-01);
+  }
+  .text-headline-02 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-headline-02);
+    line-height: var(--line-height-headline-02);
+  }
+  .text-headline-03 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-headline-03);
+    line-height: var(--line-height-headline-03);
+  }
+  
+  /* Titles */
+  .text-title-01 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-title-01);
+    line-height: var(--line-height-title-01);
+  }
+  .text-title-02 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-title-02);
+    line-height: var(--line-height-title-02);
+  }
+  .text-title-03 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-title-03);
+    line-height: var(--line-height-title-03);
+  }
+  
+  /* Sub Titles */
+  .text-sub-title-01 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sub-title-01);
+    line-height: var(--line-height-sub-title-01);
+  }
+  .text-sub-title-02 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sub-title-02);
+    line-height: var(--line-height-sub-title-02);
+  }
+  
+  /* Body */
+  .text-body-01 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body-01);
+    line-height: var(--line-height-body-01);
+  }
+  .text-body-02 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body-02);
+    line-height: var(--line-height-body-02);
+  }
+  .text-body-03 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body-03);
+    line-height: var(--line-height-body-03);
+  }
+  
+  /* Captions */
+  .text-caption-01 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-caption-01);
+    line-height: var(--line-height-caption-01);
+  }
+  .text-caption-02 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-caption-02);
+    line-height: var(--line-height-caption-02);
+  }
+  .text-caption-03 {
+    font-family: var(--font-family-korean);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-caption-03);
+    line-height: var(--line-height-caption-03);
+  }
+  
+  /* English Typography Classes */
+  .text-en-web-headline-01 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-web-headline-01);
+    line-height: var(--line-height-web-headline-01);
+  }
+  .text-en-web-headline-02 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-web-headline-02);
+    line-height: var(--line-height-web-headline-02);
+  }
+  .text-en-web-headline-03 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-web-headline-03);
+    line-height: var(--line-height-web-headline-03);
+  }
+  
+  .text-en-headline-01 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-headline-01);
+    line-height: var(--line-height-headline-01);
+  }
+  .text-en-headline-02 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-headline-02);
+    line-height: var(--line-height-headline-02);
+  }
+  .text-en-headline-03 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-headline-03);
+    line-height: var(--line-height-headline-03);
+  }
+  
+  .text-en-title-01 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-title-01);
+    line-height: var(--line-height-title-01);
+  }
+  .text-en-title-02 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-title-02);
+    line-height: var(--line-height-title-02);
+  }
+  .text-en-title-03 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-title-03);
+    line-height: var(--line-height-title-03);
+  }
+  
+  .text-en-sub-title-01 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sub-title-01);
+    line-height: var(--line-height-sub-title-01);
+  }
+  .text-en-sub-title-02 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sub-title-02);
+    line-height: var(--line-height-sub-title-02);
+  }
+  
+  .text-en-body-01 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body-01);
+    line-height: var(--line-height-body-01);
+  }
+  .text-en-body-02 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body-02);
+    line-height: var(--line-height-body-02);
+  }
+  .text-en-body-03 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-body-03);
+    line-height: var(--line-height-body-03);
+  }
+  
+  .text-en-caption-01 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-caption-01);
+    line-height: var(--line-height-caption-01);
+  }
+  .text-en-caption-02 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-caption-02);
+    line-height: var(--line-height-caption-02);
+  }
+  .text-en-caption-03 {
+    font-family: var(--font-family-english);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-caption-03);
+    line-height: var(--line-height-caption-03);
+  }
+  
+  /* Mobile Typography Classes */
+  @media (max-width: 768px) {
+    .text-web-headline-01 {
+      font-size: var(--font-size-mobile-web-headline-01);
+      line-height: var(--line-height-mobile-web-headline-01);
+    }
+    .text-web-headline-02 {
+      font-size: var(--font-size-mobile-web-headline-02);
+      line-height: var(--line-height-mobile-web-headline-02);
+    }
+    .text-web-headline-03 {
+      font-size: var(--font-size-mobile-web-headline-03);
+      line-height: var(--line-height-mobile-web-headline-03);
+    }
+    
+    .text-headline-01 {
+      font-size: var(--font-size-mobile-headline-01);
+      line-height: var(--line-height-mobile-headline-01);
+    }
+    .text-headline-02 {
+      font-size: var(--font-size-mobile-headline-02);
+      line-height: var(--line-height-mobile-headline-02);
+    }
+    .text-headline-03 {
+      font-size: var(--font-size-mobile-headline-03);
+      line-height: var(--line-height-mobile-headline-03);
+    }
+    
+    .text-title-01 {
+      font-size: var(--font-size-mobile-title-01);
+      line-height: var(--line-height-mobile-title-01);
+    }
+    .text-title-02 {
+      font-size: var(--font-size-mobile-title-02);
+      line-height: var(--line-height-mobile-title-02);
+    }
+    .text-title-03 {
+      font-size: var(--font-size-mobile-title-03);
+      line-height: var(--line-height-mobile-title-03);
+    }
+    
+    .text-sub-title-01 {
+      font-size: var(--font-size-mobile-sub-title-01);
+      line-height: var(--line-height-mobile-sub-title-01);
+    }
+    .text-sub-title-02 {
+      font-size: var(--font-size-mobile-sub-title-02);
+      line-height: var(--line-height-mobile-sub-title-02);
+    }
+    
+    .text-body-01 {
+      font-size: var(--font-size-mobile-body-01);
+      line-height: var(--line-height-mobile-body-01);
+    }
+    .text-body-02 {
+      font-size: var(--font-size-mobile-body-02);
+      line-height: var(--line-height-mobile-body-02);
+    }
+    .text-body-03 {
+      font-size: var(--font-size-mobile-body-03);
+      line-height: var(--line-height-mobile-body-03);
+    }
+    
+    .text-caption-01 {
+      font-size: var(--font-size-mobile-caption-01);
+      line-height: var(--line-height-mobile-caption-01);
+    }
+    .text-caption-02 {
+      font-size: var(--font-size-mobile-caption-02);
+      line-height: var(--line-height-mobile-caption-02);
+    }
+    .text-caption-03 {
+      font-size: var(--font-size-mobile-caption-03);
+      line-height: var(--line-height-mobile-caption-03);
+    }
+    
+    /* English Mobile Typography */
+    .text-en-web-headline-01 {
+      font-size: var(--font-size-mobile-web-headline-01);
+      line-height: var(--line-height-mobile-web-headline-01);
+    }
+    .text-en-web-headline-02 {
+      font-size: var(--font-size-mobile-web-headline-02);
+      line-height: var(--line-height-mobile-web-headline-02);
+    }
+    .text-en-web-headline-03 {
+      font-size: var(--font-size-mobile-web-headline-03);
+      line-height: var(--line-height-mobile-web-headline-03);
+    }
+    
+    .text-en-headline-01 {
+      font-size: var(--font-size-mobile-headline-01);
+      line-height: var(--line-height-mobile-headline-01);
+    }
+    .text-en-headline-02 {
+      font-size: var(--font-size-mobile-headline-02);
+      line-height: var(--line-height-mobile-headline-02);
+    }
+    .text-en-headline-03 {
+      font-size: var(--font-size-mobile-headline-03);
+      line-height: var(--line-height-mobile-headline-03);
+    }
+    
+    .text-en-title-01 {
+      font-size: var(--font-size-mobile-title-01);
+      line-height: var(--line-height-mobile-title-01);
+    }
+    .text-en-title-02 {
+      font-size: var(--font-size-mobile-title-02);
+      line-height: var(--line-height-mobile-title-02);
+    }
+    .text-en-title-03 {
+      font-size: var(--font-size-mobile-title-03);
+      line-height: var(--line-height-mobile-title-03);
+    }
+    
+    .text-en-sub-title-01 {
+      font-size: var(--font-size-mobile-sub-title-01);
+      line-height: var(--line-height-mobile-sub-title-01);
+    }
+    .text-en-sub-title-02 {
+      font-size: var(--font-size-mobile-sub-title-02);
+      line-height: var(--line-height-mobile-sub-title-02);
+    }
+    
+    .text-en-body-01 {
+      font-size: var(--font-size-mobile-body-01);
+      line-height: var(--line-height-mobile-body-01);
+    }
+    .text-en-body-02 {
+      font-size: var(--font-size-mobile-body-02);
+      line-height: var(--line-height-mobile-body-02);
+    }
+    .text-en-body-03 {
+      font-size: var(--font-size-mobile-body-03);
+      line-height: var(--line-height-mobile-body-03);
+    }
+    
+    .text-en-caption-01 {
+      font-size: var(--font-size-mobile-caption-01);
+      line-height: var(--line-height-mobile-caption-01);
+    }
+    .text-en-caption-02 {
+      font-size: var(--font-size-mobile-caption-02);
+      line-height: var(--line-height-mobile-caption-02);
+    }
+    .text-en-caption-03 {
+      font-size: var(--font-size-mobile-caption-03);
+      line-height: var(--line-height-mobile-caption-03);
+    }
+  }
 }
