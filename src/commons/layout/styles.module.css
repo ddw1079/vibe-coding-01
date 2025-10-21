@@ -1,0 +1,64 @@
+/* 레이아웃 컨테이너 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* 헤더 영역 */
+.header {
+  display: flex;
+  width: 1168px;
+  height: 60px;
+  background-color: var(--color-gray-10);
+  align-items: center;
+  justify-content: center;
+}
+
+/* 갭 영역 */
+.gap {
+  display: flex;
+  width: 1168px;
+  height: 24px;
+}
+
+/* 배너 영역 */
+.banner {
+  display: flex;
+  width: 1168px;
+  height: 240px;
+  background-color: var(--color-gray-10);
+  align-items: center;
+  justify-content: center;
+}
+
+/* 네비게이션 영역 */
+.navigation {
+  display: flex;
+  width: 1168px;
+  height: 48px;
+  background-color: var(--color-gray-10);
+  align-items: center;
+  justify-content: center;
+}
+
+/* 메인 콘텐츠 영역 */
+.main {
+  display: flex;
+  width: 1168px;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* 푸터 영역 */
+.footer {
+  display: flex;
+  width: 1168px;
+  height: 160px;
+  background-color: var(--color-gray-10);
+  align-items: center;
+  justify-content: center;
+}
+
