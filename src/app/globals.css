@@ -267,55 +267,47 @@
   --line-height-mobile-caption-03: 8px;
 }
 
-/* Dark Theme Color Variables */
-@media (prefers-color-scheme: dark) {
+/* Dark Theme Color Variables - 다크모드 기능 구현 시 사용 예정 */
+/* @media (prefers-color-scheme: dark) {
   :root {
-    /* Background */
-    --background: #000000;    /* Gray/Black */
-    --background-secondary: #1c1c1c;  /* Gray/90 */
-    --background-tertiary: #333333;   /* Gray/80 */
+    --background: #000000;
+    --background-secondary: #1c1c1c;
+    --background-tertiary: #333333;
     
-    /* Foreground */
-    --foreground: #ffffff;    /* Gray/White */
-    --foreground-secondary: #d4d3d3;  /* Gray/20 */
-    --foreground-tertiary: #ababab;   /* Gray/40 */
-    --foreground-muted: #919191;      /* Gray/50 */
+    --foreground: #ffffff;
+    --foreground-secondary: #d4d3d3;
+    --foreground-tertiary: #ababab;
+    --foreground-muted: #919191;
     
-    /* Border */
-    --border: #333333;        /* Gray/80 */
-    --border-secondary: #5f5f5f;      /* Gray/70 */
-    --border-focus: #6da5fa;          /* Blue/40 */
+    --border: #333333;
+    --border-secondary: #5f5f5f;
+    --border-focus: #6da5fa;
     
-    /* Surface */
-    --surface: #1c1c1c;       /* Gray/90 */
-    --surface-secondary: #333333;     /* Gray/80 */
-    --surface-tertiary: #5f5f5f;      /* Gray/70 */
+    --surface: #1c1c1c;
+    --surface-secondary: #333333;
+    --surface-tertiary: #5f5f5f;
   }
-}
+} */
 
-/* Dark Theme Class-based Override */
-.dark {
-  /* Background */
-  --background: #000000;    /* Gray/Black */
-  --background-secondary: #1c1c1c;  /* Gray/90 */
-  --background-tertiary: #333333;   /* Gray/80 */
+/* Dark Theme Class-based Override - 다크모드 기능 구현 시 사용 예정 */
+/* .dark {
+  --background: #000000;
+  --background-secondary: #1c1c1c;
+  --background-tertiary: #333333;
   
-  /* Foreground */
-  --foreground: #ffffff;    /* Gray/White */
-  --foreground-secondary: #d4d3d3;  /* Gray/20 */
-  --foreground-tertiary: #ababab;   /* Gray/40 */
-  --foreground-muted: #919191;      /* Gray/50 */
+  --foreground: #ffffff;
+  --foreground-secondary: #d4d3d3;
+  --foreground-tertiary: #ababab;
+  --foreground-muted: #919191;
   
-  /* Border */
-  --border: #333333;        /* Gray/80 */
-  --border-secondary: #5f5f5f;      /* Gray/70 */
-  --border-focus: #6da5fa;          /* Blue/40 */
+  --border: #333333;
+  --border-secondary: #5f5f5f;
+  --border-focus: #6da5fa;
   
-  /* Surface */
-  --surface: #1c1c1c;       /* Gray/90 */
-  --surface-secondary: #333333;     /* Gray/80 */
-  --surface-tertiary: #5f5f5f;      /* Gray/70 */
-}
+  --surface: #1c1c1c;
+  --surface-secondary: #333333;
+  --surface-tertiary: #5f5f5f;
+} */
 
 body {
   color: var(--foreground);
