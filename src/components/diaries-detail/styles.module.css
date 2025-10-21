@@ -172,8 +172,8 @@
 .retrospectLabel {
   font-family: var(--font-family-korean);
   font-weight: var(--font-weight-semibold);
-  font-size: 18px;
-  line-height: 24px;
+  font-size: var(--font-size-title-01);
+  line-height: var(--line-height-title-01);
   letter-spacing: -0.18px;
   color: var(--color-gray-black);
 }
@@ -215,8 +215,8 @@
 .retrospectItemText {
   font-family: var(--font-family-korean);
   font-weight: var(--font-weight-medium);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: var(--font-size-body-01);
+  line-height: var(--line-height-body-01);
   letter-spacing: -0.16px;
   color: var(--color-gray-black);
 }
@@ -224,8 +224,8 @@
 .retrospectItemDate {
   font-family: var(--font-family-korean);
   font-weight: var(--font-weight-regular);
-  font-size: 16px;
-  line-height: 24px;
+  font-size: var(--font-size-body-01);
+  line-height: var(--line-height-body-01);
   letter-spacing: -0.16px;
   color: var(--color-gray-60);
 }
