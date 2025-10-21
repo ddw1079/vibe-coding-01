@@ -98,7 +98,7 @@
 .theme-light.variant-primary {
   background-color: #ffffff;
   color: #000000;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #c7c7c7;
 }
 
 .theme-light.variant-primary:hover:not(.disabled) {
@@ -111,7 +111,7 @@
 
 .theme-light.variant-primary .dropdown {
   background-color: #ffffff;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #c7c7c7;
 }
 
 .theme-light.variant-primary .option {
@@ -147,7 +147,7 @@
 
 .theme-light.variant-secondary .dropdown {
   background-color: #ffffff;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #c7c7c7;
 }
 
 .theme-light.variant-secondary .option {
@@ -168,7 +168,7 @@
 .theme-light.variant-tertiary {
   background-color: transparent;
   color: #000000;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #c7c7c7;
 }
 
 .theme-light.variant-tertiary:hover:not(.disabled) {
@@ -183,7 +183,7 @@
 
 .theme-light.variant-tertiary .dropdown {
   background-color: #ffffff;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #c7c7c7;
 }
 
 .theme-light.variant-tertiary .option {
