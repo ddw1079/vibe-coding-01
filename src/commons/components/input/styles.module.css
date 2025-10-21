@@ -1,0 +1,158 @@
+/* Input Base Styles */
+.input {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  opacity: 0.5;
+}
+
+/* Size Variants */
+.size-small {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.size-medium {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.size-large {
+  height: 56px;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Theme: Dark - Primary Variant */
+.theme-dark.variant-primary {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-primary:hover:not(.disabled) {
+  border-color: #5f5f5f;
+}
+
+.theme-dark.variant-primary:focus:not(.disabled) {
+  border-color: #6da5fa;
+}
+
+/* Theme: Dark - Secondary Variant */
+.theme-dark.variant-secondary {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #5f5f5f;
+}
+
+.theme-dark.variant-secondary:hover:not(.disabled) {
+  border-color: #777777;
+}
+
+.theme-dark.variant-secondary:focus:not(.disabled) {
+  border-color: #6da5fa;
+}
+
+/* Theme: Dark - Tertiary Variant */
+.theme-dark.variant-tertiary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #777777;
+}
+
+.theme-dark.variant-tertiary:hover:not(.disabled) {
+  background-color: #1c1c1c;
+  border-color: #ababab;
+}
+
+.theme-dark.variant-tertiary:focus:not(.disabled) {
+  border-color: #6da5fa;
+}
+
+/* Theme: Light - Primary Variant */
+.theme-light.variant-primary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-light.variant-primary:hover:not(.disabled) {
+  border-color: #d4d3d3;
+}
+
+.theme-light.variant-primary:focus:not(.disabled) {
+  border-color: #3a5cf3;
+}
+
+/* Theme: Light - Secondary Variant */
+.theme-light.variant-secondary {
+  background-color: #f2f2f2;
+  color: #000000;
+  border: 1px solid #d4d3d3;
+}
+
+.theme-light.variant-secondary:hover:not(.disabled) {
+  border-color: #c7c7c7;
+}
+
+.theme-light.variant-secondary:focus:not(.disabled) {
+  border-color: #3a5cf3;
+}
+
+/* Theme: Light - Tertiary Variant */
+.theme-light.variant-tertiary {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #c7c7c7;
+}
+
+.theme-light.variant-tertiary:hover:not(.disabled) {
+  background-color: #f2f2f2;
+  border-color: #ababab;
+}
+
+.theme-light.variant-tertiary:focus:not(.disabled) {
+  border-color: #3a5cf3;
+}
+
+/* Error State */
+.error.theme-dark {
+  border-color: #f03851;
+}
+
+.error.theme-dark:focus {
+  border-color: #f03851;
+}
+
+.error.theme-light {
+  border-color: #f03851;
+}
+
+.error.theme-light:focus {
+  border-color: #f03851;
+}
+
+/* Disabled State */
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Full Width */
+.fullWidth {
+  width: 100%;
+}
+
