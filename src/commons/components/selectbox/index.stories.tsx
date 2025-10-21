@@ -8,6 +8,11 @@ const sampleOptions = [
   { value: 'option3', label: '옵션 3' },
   { value: 'option4', label: '옵션 4' },
   { value: 'option5', label: '옵션 5' },
+  { value: 'option6', label: '옵션 6' },
+  { value: 'option7', label: '옵션 7' },
+  { value: 'option8', label: '옵션 8' },
+  { value: 'option9', label: '옵션 9' },
+  { value: 'option10', label: '옵션 10' },
 ];
 
 // Meta 설정
