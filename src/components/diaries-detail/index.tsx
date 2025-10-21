@@ -87,7 +87,7 @@ export default function DiariesDetail() {
       <div className={styles.detailFooter}>
         <div className={styles.buttonWrapper}>
           <Button
-            variant="tertiary"
+            variant="secondary"
             size="small"
             theme="light"
             onClick={handleEdit}
@@ -96,7 +96,7 @@ export default function DiariesDetail() {
             수정
           </Button>
           <Button
-            variant="tertiary"
+            variant="secondary"
             size="small"
             theme="light"
             onClick={handleDelete}
