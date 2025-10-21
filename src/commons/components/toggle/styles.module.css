@@ -1,12 +1,11 @@
 /* Toggle Base Styles */
 .toggle {
-  position: relative;
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, justify-content 0.2s ease;
   flex-shrink: 0;
 }
 
@@ -14,7 +13,6 @@
 .handle {
   background-color: #ffffff;
   border-radius: 50%;
-  transition: transform 0.2s ease;
 }
 
 /* Size Variants */
@@ -22,6 +20,7 @@
   width: 44px;
   height: 24px;
   border-radius: 12px;
+  padding: 3px;
 }
 
 .size-small .handle {
@@ -29,18 +28,11 @@
   height: 18px;
 }
 
-.size-small .handleUnchecked {
-  transform: translateX(3px);
-}
-
-.size-small .handleChecked {
-  transform: translateX(23px);
-}
-
 .size-medium {
   width: 58px;
   height: 32px;
   border-radius: 16px;
+  padding: 4px;
 }
 
 .size-medium .handle {
@@ -48,18 +40,11 @@
   height: 24px;
 }
 
-.size-medium .handleUnchecked {
-  transform: translateX(4px);
-}
-
-.size-medium .handleChecked {
-  transform: translateX(30px);
-}
-
 .size-large {
   width: 72px;
   height: 40px;
   border-radius: 20px;
+  padding: 4px;
 }
 
 .size-large .handle {
@@ -67,12 +52,13 @@
   height: 32px;
 }
 
-.size-large .handleUnchecked {
-  transform: translateX(4px);
+/* Toggle State - Flexbox Alignment */
+.unchecked {
+  justify-content: flex-start;
 }
 
-.size-large .handleChecked {
-  transform: translateX(36px);
+.checked {
+  justify-content: flex-end;
 }
 
 /* Theme: Dark - Primary Variant */

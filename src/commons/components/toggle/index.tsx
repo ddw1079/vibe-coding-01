@@ -58,13 +58,6 @@ export const Toggle: React.FC<ToggleProps> = ({
     .filter(Boolean)
     .join(' ');
 
-  const handleClasses = [
-    styles.handle,
-    checked ? styles.handleChecked : styles.handleUnchecked,
-  ]
-    .filter(Boolean)
-    .join(' ');
-
   return (
     <button
       type="button"
@@ -74,7 +67,7 @@ export const Toggle: React.FC<ToggleProps> = ({
       onClick={handleToggle}
       disabled={disabled}
     >
-      <span className={handleClasses} />
+      <span className={styles.handle} />
     </button>
   );
 };
