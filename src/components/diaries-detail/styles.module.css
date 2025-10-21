@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1168px;
+  margin: 0 auto;
+}
+
+.gap64 {
+  width: 1168px;
+  height: 64px;
+}
+
+.detailTitle {
+  display: flex;
+  width: 1168px;
+  height: 84px;
+  background-color: var(--color-gray-10);
+}
+
+.gap24 {
+  width: 1168px;
+  height: 24px;
+}
+
+.detailContent {
+  display: flex;
+  width: 1168px;
+  height: 169px;
+  background-color: var(--color-gray-10);
+}
+
+.detailFooter {
+  display: flex;
+  width: 1168px;
+  height: 56px;
+  background-color: var(--color-gray-10);
+}
+
+.retrospectInput {
+  display: flex;
+  width: 1168px;
+  height: 85px;
+  background-color: var(--color-gray-10);
+}
+
+.gap16 {
+  width: 1168px;
+  height: 16px;
+}
+
+.retrospectList {
+  display: flex;
+  width: 1168px;
+  height: 72px;
+  background-color: var(--color-gray-10);
+}
+
