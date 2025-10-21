@@ -10,11 +10,50 @@
 /* 헤더 영역 */
 .header {
   display: flex;
-  width: 1168px;
+  width: 100%;
   height: 60px;
-  background-color: var(--color-gray-10);
   align-items: center;
   justify-content: center;
+}
+
+.headerContent {
+  display: flex;
+  width: 1168px;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  width: 120px;
+  height: 40px;
+  align-items: center;
+}
+
+.logoText {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: -0.18px;
+  color: var(--color-gray-black);
+}
+
+.darkModeArea {
+  display: flex;
+  width: 55px;
+  height: 24px;
+  align-items: center;
+}
+
+.darkModeText {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--color-gray-90);
 }
 
 /* 갭 영역 */
@@ -29,9 +68,15 @@
   display: flex;
   width: 1168px;
   height: 240px;
-  background-color: var(--color-gray-10);
-  align-items: center;
-  justify-content: center;
+}
+
+.bannerImage {
+  width: 1168px;
+  height: 240px;
+  border-radius: 24px;
+  background-image: url('/images/banner.png');
+  background-size: cover;
+  background-position: center;
 }
 
 /* 네비게이션 영역 */
@@ -39,9 +84,43 @@
   display: flex;
   width: 1168px;
   height: 48px;
-  background-color: var(--color-gray-10);
+}
+
+.navigationContent {
+  display: flex;
+  width: 1168px;
+  height: 48px;
+  gap: 16px;
+}
+
+.tab {
+  display: flex;
+  width: 119px;
+  height: 48px;
   align-items: center;
   justify-content: center;
+}
+
+.tabActive {
+  border-bottom: 1px solid var(--color-gray-black);
+}
+
+.tabText {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-bold);
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: var(--color-gray-black);
+}
+
+.tabTextInactive {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-medium);
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: var(--color-gray-40);
 }
 
 /* 메인 콘텐츠 영역 */
@@ -55,10 +134,45 @@
 /* 푸터 영역 */
 .footer {
   display: flex;
-  width: 1168px;
+  width: 100%;
   height: 160px;
-  background-color: var(--color-gray-10);
+  background-color: var(--color-gray-5);
   align-items: center;
   justify-content: center;
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  width: 1168px;
+  height: 112px;
+  gap: 16px;
+}
+
+.footerLogo {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-bold);
+  font-size: 20px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: var(--color-gray-black);
+}
+
+.footerInfo {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.14px;
+  color: var(--color-gray-70);
+}
+
+.footerCopyright {
+  font-family: var(--font-family-korean);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.14px;
+  color: var(--color-gray-50);
 }
 

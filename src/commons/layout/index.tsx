@@ -8,13 +8,41 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>Header</header>
+      <header className={styles.header}>
+        <div className={styles.headerContent}>
+          <div className={styles.logo}>
+            <span className={styles.logoText}>민지의 다이어리</span>
+          </div>
+          <div className={styles.darkModeArea}>
+            <span className={styles.darkModeText}>다크모드</span>
+          </div>
+        </div>
+      </header>
       <div className={styles.gap} />
-      <div className={styles.banner}>Banner</div>
+      <div className={styles.banner}>
+        <div className={styles.bannerImage} />
+      </div>
       <div className={styles.gap} />
-      <nav className={styles.navigation}>Navigation</nav>
+      <nav className={styles.navigation}>
+        <div className={styles.navigationContent}>
+          <div className={`${styles.tab} ${styles.tabActive}`}>
+            <span className={styles.tabText}>일기보관함</span>
+          </div>
+          <div className={styles.tab}>
+            <span className={styles.tabTextInactive}>사진보관함</span>
+          </div>
+        </div>
+      </nav>
       <main className={styles.main}>{children}</main>
-      <footer className={styles.footer}>Footer</footer>
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerLogo}>민지의 다이어리</div>
+          <div className={styles.footerInfo}>대표 : {'{name}'}</div>
+          <div className={styles.footerCopyright}>
+            Copyright © 2024. {'{name}'} Co., Ltd.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
