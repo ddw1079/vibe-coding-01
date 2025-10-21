@@ -2,118 +2,180 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light Theme Color Variables (피그마 기반) */
+/* Light Theme Color Variables (피그마 파운데이션 기반) */
 :root {
   /* Background */
-  --background: #ffffff;    /* 피그마 페이지 배경 */
-  --background-secondary: #f0f7ff;  /* 피그마 Title 배경 */
-  --background-tertiary: #e5e5e5;
+  --background: #ffffff;    /* Gray/White */
+  --background-secondary: #f0f7ff;  /* Blue/05 */
+  --background-tertiary: #f2f2f2;   /* Gray/05 */
   
   /* Foreground */
-  --foreground: #000000;    /* 피그마 텍스트 색상 */
-  --foreground-secondary: #777777;  /* 피그마 Component 텍스트 색상 */
-  --foreground-tertiary: #737373;
-  --foreground-muted: #a3a3a3;
+  --foreground: #000000;    /* Gray/Black */
+  --foreground-secondary: #777777;  /* Gray/60 */
+  --foreground-tertiary: #919191;   /* Gray/50 */
+  --foreground-muted: #ababab;      /* Gray/40 */
   
   /* Border */
-  --border: #e5e5e5;
-  --border-secondary: #d4d4d4;
-  --border-focus: #0ea5e9;
+  --border: #e4e4e4;        /* Gray/10 */
+  --border-secondary: #d4d3d3;      /* Gray/20 */
+  --border-focus: #497cff;          /* Blue/50 */
   
   /* Surface */
-  --surface: #ffffff;    /* 피그마 페이지 배경 */
-  --surface-secondary: #f0f7ff;  /* 피그마 Title 배경 */
-  --surface-tertiary: #f5f5f5;
+  --surface: #ffffff;       /* Gray/White */
+  --surface-secondary: #f0f7ff;     /* Blue/05 */
+  --surface-tertiary: #f2f2f2;      /* Gray/05 */
   
-  /* Primary Colors (피그마 기반) */
-  --color-primary-50: #f0f7ff;  /* 피그마 Title 배경색 */
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
-  --color-primary-950: #082f49;
+  /* Blue Colors (피그마 Blue 수정 231107) */
+  --color-blue-5: #f0f7ff;   /* Blue/05 */
+  --color-blue-10: #dbeeff;  /* Blue/10 */
+  --color-blue-20: #bddbff;  /* Blue/20 */
+  --color-blue-30: #93beff;  /* Blue/30 */
+  --color-blue-40: #6da5fa;  /* Blue/40 (System color) */
+  --color-blue-50: #497cff;  /* Blue/50 */
+  --color-blue-60: #3a5cf3;  /* Blue/60 (System color) */
+  --color-blue-70: #274ae1;  /* Blue/70 */
+  --color-blue-80: #1530a6;  /* Blue/80 */
+  --color-blue-90: #0b2184;  /* Blue/90 */
   
-  /* Secondary Colors */
-  --color-secondary-50: #f8fafc;
-  --color-secondary-100: #f1f5f9;
-  --color-secondary-200: #e2e8f0;
-  --color-secondary-300: #cbd5e1;
-  --color-secondary-400: #94a3b8;
-  --color-secondary-500: #64748b;
-  --color-secondary-600: #475569;
-  --color-secondary-700: #334155;
-  --color-secondary-800: #1e293b;
-  --color-secondary-900: #0f172a;
-  --color-secondary-950: #020617;
+  /* Gray Colors (피그마 Gray) */
+  --color-gray-white: #ffffff;  /* Gray/White */
+  --color-gray-5: #f2f2f2;      /* Gray/05 */
+  --color-gray-10: #e4e4e4;     /* Gray/10 */
+  --color-gray-20: #d4d3d3;     /* Gray/20 */
+  --color-gray-30: #c7c7c7;     /* Gray/30 */
+  --color-gray-40: #ababab;     /* Gray/40 */
+  --color-gray-50: #919191;     /* Gray/50 */
+  --color-gray-60: #777777;     /* Gray/60 */
+  --color-gray-70: #5f5f5f;     /* Gray/70 */
+  --color-gray-80: #333333;     /* Gray/80 */
+  --color-gray-90: #1c1c1c;     /* Gray/90 */
+  --color-gray-black: #000000;  /* Gray/Black */
   
-  /* Neutral Colors */
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
-  --color-neutral-950: #0a0a0a;
+  /* Red Colors (피그마 Red) */
+  --color-red-5: #fdd7dc;   /* Red/05 */
+  --color-red-10: #f797a4;  /* Red/10 */
+  --color-red-20: #f4677a;  /* Red/20 */
+  --color-red-30: #f03851;  /* Red/30 (Error color) */
+  --color-red-40: #e4112e;  /* Red/40 */
+  --color-red-50: #b40e24;  /* Red/50 */
+  --color-red-60: #850a1b;  /* Red/60 */
   
-  /* Semantic Colors - Success (피그마 기반) */
-  --color-success-50: #f0fdf4;
-  --color-success-100: #dcfce7;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #86efac;
-  --color-success-400: #4ade80;
-  --color-success-500: #12b75f;  /* 피그마 Mobile chip 색상 */
-  --color-success-600: #16a34a;
+  /* Green Colors (피그마 Green) */
+  --color-green-5: #d3f3e0;   /* Green/05 */
+  --color-green-10: #92e6b9;  /* Green/10 */
+  --color-green-20: #15d66f;  /* Green/20 */
+  --color-green-30: #12b75f;  /* Green/30 (Success color) */
+  --color-green-40: #109c51;  /* Green/40 */
+  --color-green-50: #0e723c;  /* Green/50 */
+  --color-green-60: #084424;  /* Green/60 */
+  
+  /* Yellow Colors (피그마 Yellow) */
+  --color-yellow-5: #ffe499;   /* Yellow/05 */
+  --color-yellow-10: #ffd666;  /* Yellow/10 */
+  --color-yellow-20: #ffc933;  /* Yellow/20 */
+  --color-yellow-30: #ffb300;  /* Yellow/30 */
+  --color-yellow-40: #eba500;  /* Yellow/40 */
+  --color-yellow-50: #d69600;  /* Yellow/50 */
+  --color-yellow-60: #b27d00;  /* Yellow/60 */
+  
+  /* Cool Gray Colors (피그마 Cool gray) */
+  --color-cool-gray-5: #f8f8fa;   /* Cool gray/05 */
+  --color-cool-gray-10: #f6f6f9;  /* Cool gray/10 */
+  --color-cool-gray-20: #edeef2;  /* Cool gray/20 */
+  --color-cool-gray-30: #dddfe5;  /* Cool gray/30 */
+  --color-cool-gray-40: #c7c9d5;  /* Cool gray/40 */
+  --color-cool-gray-50: #bbbecd;  /* Cool gray/50 */
+  --color-cool-gray-60: #b0b3c4;  /* Cool gray/60 */
+  
+  /* Primary Colors (Blue 기반) */
+  --color-primary-50: #f0f7ff;    /* Blue/05 */
+  --color-primary-100: #dbeeff;   /* Blue/10 */
+  --color-primary-200: #bddbff;   /* Blue/20 */
+  --color-primary-300: #93beff;   /* Blue/30 */
+  --color-primary-400: #6da5fa;   /* Blue/40 */
+  --color-primary-500: #497cff;   /* Blue/50 */
+  --color-primary-600: #3a5cf3;   /* Blue/60 */
+  --color-primary-700: #274ae1;   /* Blue/70 */
+  --color-primary-800: #1530a6;   /* Blue/80 */
+  --color-primary-900: #0b2184;   /* Blue/90 */
+  --color-primary-950: #082f49;   /* 추가 다크 톤 */
+  
+  /* Secondary Colors (Cool Gray 기반) */
+  --color-secondary-50: #f8f8fa;   /* Cool gray/05 */
+  --color-secondary-100: #f6f6f9;  /* Cool gray/10 */
+  --color-secondary-200: #edeef2;  /* Cool gray/20 */
+  --color-secondary-300: #dddfe5;  /* Cool gray/30 */
+  --color-secondary-400: #c7c9d5;  /* Cool gray/40 */
+  --color-secondary-500: #bbbecd;  /* Cool gray/50 */
+  --color-secondary-600: #b0b3c4;  /* Cool gray/60 */
+  --color-secondary-700: #5f5f5f;  /* Gray/70 */
+  --color-secondary-800: #333333;  /* Gray/80 */
+  --color-secondary-900: #1c1c1c;  /* Gray/90 */
+  --color-secondary-950: #000000;  /* Gray/Black */
+  
+  /* Neutral Colors (Gray 기반) */
+  --color-neutral-50: #ffffff;     /* Gray/White */
+  --color-neutral-100: #f2f2f2;    /* Gray/05 */
+  --color-neutral-200: #e4e4e4;    /* Gray/10 */
+  --color-neutral-300: #d4d3d3;    /* Gray/20 */
+  --color-neutral-400: #c7c7c7;    /* Gray/30 */
+  --color-neutral-500: #ababab;    /* Gray/40 */
+  --color-neutral-600: #919191;    /* Gray/50 */
+  --color-neutral-700: #777777;    /* Gray/60 */
+  --color-neutral-800: #5f5f5f;    /* Gray/70 */
+  --color-neutral-900: #333333;    /* Gray/80 */
+  --color-neutral-950: #000000;    /* Gray/Black */
+  
+  /* Semantic Colors - Success (Green 기반) */
+  --color-success-50: #d3f3e0;     /* Green/05 */
+  --color-success-100: #92e6b9;    /* Green/10 */
+  --color-success-200: #15d66f;    /* Green/20 */
+  --color-success-300: #12b75f;    /* Green/30 (Success color) */
+  --color-success-400: #109c51;    /* Green/40 */
+  --color-success-500: #0e723c;    /* Green/50 */
+  --color-success-600: #084424;    /* Green/60 */
   --color-success-700: #15803d;
   --color-success-800: #166534;
   --color-success-900: #14532d;
   --color-success-950: #052e16;
   
-  /* Semantic Colors - Warning (피그마 기반) */
-  --color-warning-50: #fffbeb;
-  --color-warning-100: #fef3c7;
-  --color-warning-200: #fde68a;
-  --color-warning-300: #fcd34d;
-  --color-warning-400: #fbbf24;
-  --color-warning-500: #ffb300;  /* 피그마 Web chip 색상 */
-  --color-warning-600: #d97706;
+  /* Semantic Colors - Warning (Yellow 기반) */
+  --color-warning-50: #ffe499;     /* Yellow/05 */
+  --color-warning-100: #ffd666;    /* Yellow/10 */
+  --color-warning-200: #ffc933;    /* Yellow/20 */
+  --color-warning-300: #ffb300;    /* Yellow/30 */
+  --color-warning-400: #eba500;    /* Yellow/40 */
+  --color-warning-500: #d69600;    /* Yellow/50 */
+  --color-warning-600: #b27d00;    /* Yellow/60 */
   --color-warning-700: #b45309;
   --color-warning-800: #92400e;
   --color-warning-900: #78350f;
   --color-warning-950: #451a03;
   
-  /* Semantic Colors - Error */
-  --color-error-50: #fef2f2;
-  --color-error-100: #fee2e2;
-  --color-error-200: #fecaca;
-  --color-error-300: #fca5a5;
-  --color-error-400: #f87171;
-  --color-error-500: #ef4444;
-  --color-error-600: #dc2626;
+  /* Semantic Colors - Error (Red 기반) */
+  --color-error-50: #fdd7dc;       /* Red/05 */
+  --color-error-100: #f797a4;      /* Red/10 */
+  --color-error-200: #f4677a;      /* Red/20 */
+  --color-error-300: #f03851;      /* Red/30 (Error color) */
+  --color-error-400: #e4112e;      /* Red/40 */
+  --color-error-500: #b40e24;      /* Red/50 */
+  --color-error-600: #850a1b;      /* Red/60 */
   --color-error-700: #b91c1c;
   --color-error-800: #991b1b;
   --color-error-900: #7f1d1d;
   --color-error-950: #450a0a;
   
-  /* Semantic Colors - Info */
-  --color-info-50: #eff6ff;
-  --color-info-100: #dbeafe;
-  --color-info-200: #bfdbfe;
-  --color-info-300: #93c5fd;
-  --color-info-400: #60a5fa;
-  --color-info-500: #3b82f6;
-  --color-info-600: #2563eb;
-  --color-info-700: #1d4ed8;
-  --color-info-800: #1e40af;
-  --color-info-900: #1e3a8a;
+  /* Semantic Colors - Info (Blue 기반) */
+  --color-info-50: #f0f7ff;        /* Blue/05 */
+  --color-info-100: #dbeeff;       /* Blue/10 */
+  --color-info-200: #bddbff;       /* Blue/20 */
+  --color-info-300: #93beff;       /* Blue/30 */
+  --color-info-400: #6da5fa;       /* Blue/40 */
+  --color-info-500: #497cff;       /* Blue/50 */
+  --color-info-600: #3a5cf3;       /* Blue/60 */
+  --color-info-700: #274ae1;       /* Blue/70 */
+  --color-info-800: #1530a6;       /* Blue/80 */
+  --color-info-900: #0b2184;       /* Blue/90 */
   --color-info-950: #172554;
 }
 
@@ -121,50 +183,50 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Background */
-    --background: #0a0a0a;
-    --background-secondary: #171717;
-    --background-tertiary: #262626;
+    --background: #000000;    /* Gray/Black */
+    --background-secondary: #1c1c1c;  /* Gray/90 */
+    --background-tertiary: #333333;   /* Gray/80 */
     
     /* Foreground */
-    --foreground: #fafafa;
-    --foreground-secondary: #e5e5e5;
-    --foreground-tertiary: #a3a3a3;
-    --foreground-muted: #737373;
+    --foreground: #ffffff;    /* Gray/White */
+    --foreground-secondary: #d4d3d3;  /* Gray/20 */
+    --foreground-tertiary: #ababab;   /* Gray/40 */
+    --foreground-muted: #919191;      /* Gray/50 */
     
     /* Border */
-    --border: #262626;
-    --border-secondary: #404040;
-    --border-focus: #38bdf8;
+    --border: #333333;        /* Gray/80 */
+    --border-secondary: #5f5f5f;      /* Gray/70 */
+    --border-focus: #6da5fa;          /* Blue/40 */
     
     /* Surface */
-    --surface: #171717;
-    --surface-secondary: #262626;
-    --surface-tertiary: #404040;
+    --surface: #1c1c1c;       /* Gray/90 */
+    --surface-secondary: #333333;     /* Gray/80 */
+    --surface-tertiary: #5f5f5f;      /* Gray/70 */
   }
 }
 
 /* Dark Theme Class-based Override */
 .dark {
   /* Background */
-  --background: #0a0a0a;
-  --background-secondary: #171717;
-  --background-tertiary: #262626;
+  --background: #000000;    /* Gray/Black */
+  --background-secondary: #1c1c1c;  /* Gray/90 */
+  --background-tertiary: #333333;   /* Gray/80 */
   
   /* Foreground */
-  --foreground: #fafafa;
-  --foreground-secondary: #e5e5e5;
-  --foreground-tertiary: #a3a3a3;
-  --foreground-muted: #737373;
+  --foreground: #ffffff;    /* Gray/White */
+  --foreground-secondary: #d4d3d3;  /* Gray/20 */
+  --foreground-tertiary: #ababab;   /* Gray/40 */
+  --foreground-muted: #919191;      /* Gray/50 */
   
   /* Border */
-  --border: #262626;
-  --border-secondary: #404040;
-  --border-focus: #38bdf8;
+  --border: #333333;        /* Gray/80 */
+  --border-secondary: #5f5f5f;      /* Gray/70 */
+  --border-focus: #6da5fa;          /* Blue/40 */
   
   /* Surface */
-  --surface: #171717;
-  --surface-secondary: #262626;
-  --surface-tertiary: #404040;
+  --surface: #1c1c1c;       /* Gray/90 */
+  --surface-secondary: #333333;     /* Gray/80 */
+  --surface-tertiary: #5f5f5f;      /* Gray/70 */
 }
 
 body {
@@ -179,7 +241,7 @@ body {
     text-wrap: balance;
   }
   
-  /* Color utility classes */
+  /* Color utility classes (피그마 기반) */
   .bg-primary {
     background-color: var(--color-primary-500);
   }
@@ -203,4 +265,42 @@ body {
   .border-default {
     border-color: var(--border);
   }
+  
+  /* Blue utility classes */
+  .bg-blue-5 { background-color: var(--color-blue-5); }
+  .bg-blue-10 { background-color: var(--color-blue-10); }
+  .bg-blue-20 { background-color: var(--color-blue-20); }
+  .bg-blue-30 { background-color: var(--color-blue-30); }
+  .bg-blue-40 { background-color: var(--color-blue-40); }
+  .bg-blue-50 { background-color: var(--color-blue-50); }
+  .bg-blue-60 { background-color: var(--color-blue-60); }
+  .bg-blue-70 { background-color: var(--color-blue-70); }
+  .bg-blue-80 { background-color: var(--color-blue-80); }
+  .bg-blue-90 { background-color: var(--color-blue-90); }
+  
+  .text-blue-5 { color: var(--color-blue-5); }
+  .text-blue-10 { color: var(--color-blue-10); }
+  .text-blue-20 { color: var(--color-blue-20); }
+  .text-blue-30 { color: var(--color-blue-30); }
+  .text-blue-40 { color: var(--color-blue-40); }
+  .text-blue-50 { color: var(--color-blue-50); }
+  .text-blue-60 { color: var(--color-blue-60); }
+  .text-blue-70 { color: var(--color-blue-70); }
+  .text-blue-80 { color: var(--color-blue-80); }
+  .text-blue-90 { color: var(--color-blue-90); }
+  
+  /* Success utility classes */
+  .bg-success { background-color: var(--color-success-300); }
+  .text-success { color: var(--color-success-300); }
+  .border-success { border-color: var(--color-success-300); }
+  
+  /* Error utility classes */
+  .bg-error { background-color: var(--color-error-300); }
+  .text-error { color: var(--color-error-300); }
+  .border-error { border-color: var(--color-error-300); }
+  
+  /* Warning utility classes */
+  .bg-warning { background-color: var(--color-warning-300); }
+  .text-warning { color: var(--color-warning-300); }
+  .border-warning { border-color: var(--color-warning-300); }
 }
