@@ -10,7 +10,6 @@
   cursor: pointer;
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 600;
-  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
