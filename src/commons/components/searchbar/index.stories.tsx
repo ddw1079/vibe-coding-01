@@ -208,13 +208,24 @@ export const AllSizes: Story = {
   ),
 };
 
-// 조합 스토리 - 상태별
-export const States: Story = {
+// 조합 스토리 - Disabled 상태
+export const DisabledStates: Story = {
   render: () => (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '400px' }}>
-      <SearchBar variant="primary" theme="dark" placeholder="기본 상태" />
-      <SearchBar variant="primary" theme="dark" placeholder="비활성화 상태" disabled />
-      <SearchBar variant="primary" theme="dark" placeholder="에러 상태" error />
+      <SearchBar variant="primary" theme="dark" placeholder="Primary Disabled" disabled />
+      <SearchBar variant="secondary" theme="dark" placeholder="Secondary Disabled" disabled />
+      <SearchBar variant="tertiary" theme="dark" placeholder="Tertiary Disabled" disabled />
+    </div>
+  ),
+};
+
+// 조합 스토리 - Error 상태
+export const ErrorStates: Story = {
+  render: () => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '400px' }}>
+      <SearchBar variant="primary" theme="dark" placeholder="Primary Error" error />
+      <SearchBar variant="secondary" theme="dark" placeholder="Secondary Error" error />
+      <SearchBar variant="tertiary" theme="dark" placeholder="Tertiary Error" error />
     </div>
   ),
 };
