@@ -1,11 +1,14 @@
 /**
  * Color Design Tokens
- * 다크모드를 포함한 전체 프로젝트에서 사용할 color 토큰
+ * 피그마 파운데이션 기반 다크모드를 포함한 전체 프로젝트에서 사용할 color 토큰
+ * 
+ * 피그마 노드 ID: 3459:1131
+ * 채널: 6l8944n5
  */
 
-// Primary Colors
+// Primary Colors (피그마 기반)
 export const primary = {
-  50: '#f0f9ff',
+  50: '#f0f7ff',   // Title 배경색
   100: '#e0f2fe',
   200: '#bae6fd',
   300: '#7dd3fc',
@@ -48,7 +51,7 @@ export const neutral = {
   950: '#0a0a0a',
 } as const;
 
-// Semantic Colors
+// Semantic Colors (피그마 기반)
 export const semantic = {
   success: {
     50: '#f0fdf4',
@@ -56,7 +59,7 @@ export const semantic = {
     200: '#bbf7d0',
     300: '#86efac',
     400: '#4ade80',
-    500: '#22c55e',
+    500: '#12b75f',   // Mobile chip 색상
     600: '#16a34a',
     700: '#15803d',
     800: '#166534',
@@ -69,7 +72,7 @@ export const semantic = {
     200: '#fde68a',
     300: '#fcd34d',
     400: '#fbbf24',
-    500: '#f59e0b',
+    500: '#ffb300',   // Web chip 색상
     600: '#d97706',
     700: '#b45309',
     800: '#92400e',
@@ -104,16 +107,16 @@ export const semantic = {
   },
 } as const;
 
-// Light Theme Colors
+// Light Theme Colors (피그마 기반)
 export const light = {
   background: {
-    primary: neutral[50],
-    secondary: neutral[100],
+    primary: '#ffffff',    // 피그마 페이지 배경
+    secondary: '#f0f7ff',  // 피그마 Title 배경
     tertiary: neutral[200],
   },
   foreground: {
-    primary: neutral[900],
-    secondary: neutral[700],
+    primary: '#000000',    // 피그마 텍스트 색상
+    secondary: '#777777',  // 피그마 Component 텍스트 색상
     tertiary: neutral[500],
     muted: neutral[400],
   },
@@ -123,8 +126,8 @@ export const light = {
     focus: primary[500],
   },
   surface: {
-    primary: '#ffffff',
-    secondary: neutral[50],
+    primary: '#ffffff',    // 피그마 페이지 배경
+    secondary: '#f0f7ff',  // 피그마 Title 배경
     tertiary: neutral[100],
   },
 } as const;
@@ -171,8 +174,8 @@ export const withOpacity = (color: string, opacity: number): string => {
 
 // CSS Variable Names
 export const cssVariables = {
-  // Primary
-  '--color-primary-50': primary[50],
+  // Primary (피그마 기반)
+  '--color-primary-50': primary[50],  // #f0f7ff - Title 배경색
   '--color-primary-100': primary[100],
   '--color-primary-200': primary[200],
   '--color-primary-300': primary[300],
