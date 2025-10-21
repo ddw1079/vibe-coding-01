@@ -12,12 +12,36 @@
 
 .search {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 1168px;
   height: 48px;
-  background-color: var(--color-gray-5);
-  border: 1px solid var(--border);
+  gap: 8px;
+}
+
+.searchLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.selectBox {
+  width: 120px;
+}
+
+.searchBar {
+  width: 320px;
+}
+
+.writeButton {
+  width: 110px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 
 .gap42 {
