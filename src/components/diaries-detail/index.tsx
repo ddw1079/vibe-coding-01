@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/commons/components/button';
+import { Input } from '@/commons/components/input';
 import { EmotionType, getEmotionInfo } from '@/commons/constants/enum';
 import styles from './styles.module.css';
 
@@ -15,8 +16,22 @@ const mockDiaryData = {
     '내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다내용이 들어갑니다',
 };
 
+const mockRetrospectData = [
+  {
+    id: 1,
+    text: '3년이 지나고 다시 보니 이때가 그립다.',
+    date: '2024. 09. 24',
+  },
+  {
+    id: 2,
+    text: '3년이 지나고 다시 보니 이때가 그립다.',
+    date: '2024. 09. 24',
+  },
+];
+
 export default function DiariesDetail() {
   const emotionInfo = getEmotionInfo(mockDiaryData.emotion);
+  const [retrospectInput, setRetrospectInput] = useState('');
 
   const handleCopyContent = () => {
     navigator.clipboard.writeText(mockDiaryData.content);
@@ -28,6 +43,11 @@ export default function DiariesDetail() {
 
   const handleDelete = () => {
     console.log('삭제 버튼 클릭');
+  };
+
+  const handleRetrospectSubmit = () => {
+    console.log('회고 입력:', retrospectInput);
+    setRetrospectInput('');
   };
 
   return (
@@ -108,9 +128,48 @@ export default function DiariesDetail() {
       </div>
 
       <div className={styles.gap24} />
-      <div className={styles.retrospectInput}>retrospect-input</div>
+
+      {/* retrospect-input */}
+      <div className={styles.retrospectInput}>
+        <div className={styles.retrospectLabel}>회고</div>
+        <div className={styles.retrospectInputWrapper}>
+          <Input
+            variant="primary"
+            size="medium"
+            theme="light"
+            placeholder="회고를 남겨보세요."
+            value={retrospectInput}
+            onChange={(e) => setRetrospectInput(e.target.value)}
+            className={styles.retrospectInputField}
+          />
+          <Button
+            variant="primary"
+            size="medium"
+            theme="light"
+            onClick={handleRetrospectSubmit}
+            className={styles.retrospectInputButton}
+          >
+            입력
+          </Button>
+        </div>
+      </div>
+
       <div className={styles.gap16} />
-      <div className={styles.retrospectList}>retrospect-list</div>
+
+      {/* retrospect-list */}
+      <div className={styles.retrospectList}>
+        {mockRetrospectData.map((retrospect, index) => (
+          <React.Fragment key={retrospect.id}>
+            <div className={styles.retrospectItem}>
+              <span className={styles.retrospectItemText}>{retrospect.text}</span>
+              <span className={styles.retrospectItemDate}>[{retrospect.date}]</span>
+            </div>
+            {index < mockRetrospectData.length - 1 && (
+              <div className={styles.retrospectDivider} />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
     </div>
   );
 }

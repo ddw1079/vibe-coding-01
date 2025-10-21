@@ -164,9 +164,33 @@
 
 .retrospectInput {
   display: flex;
+  flex-direction: column;
   width: 1168px;
-  height: 85px;
-  background-color: var(--color-gray-10);
+  gap: 13px;
+}
+
+.retrospectLabel {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-semibold);
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.18px;
+  color: var(--color-gray-black);
+}
+
+.retrospectInputWrapper {
+  display: flex;
+  gap: 16px;
+  width: 1168px;
+  height: 48px;
+}
+
+.retrospectInputField {
+  width: 1101px;
+}
+
+.retrospectInputButton {
+  width: 51px;
 }
 
 .gap16 {
@@ -176,8 +200,40 @@
 
 .retrospectList {
   display: flex;
+  flex-direction: column;
   width: 1168px;
-  height: 72px;
+}
+
+.retrospectItem {
+  display: flex;
+  gap: 12px;
+  width: 1168px;
+  height: 24px;
+  align-items: center;
+}
+
+.retrospectItemText {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-medium);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--color-gray-black);
+}
+
+.retrospectItemDate {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--color-gray-60);
+}
+
+.retrospectDivider {
+  width: 1168px;
+  height: 1px;
   background-color: var(--color-gray-10);
+  margin: 12px 0;
 }
 
