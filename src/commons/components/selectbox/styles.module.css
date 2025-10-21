@@ -1,0 +1,333 @@
+/* SelectBox Container */
+.container {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/* SelectBox Base Styles */
+.selectBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+/* Content Wrapper */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+/* Label */
+.label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Icon */
+.icon {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.iconOpen {
+  transform: rotate(180deg);
+}
+
+/* Size Variants */
+.size-small {
+  height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 100px;
+}
+
+.size-medium {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+  min-width: 120px;
+}
+
+.size-large {
+  height: 56px;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 24px;
+  min-width: 140px;
+}
+
+/* Dropdown Menu Base */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Dropdown Option */
+.option {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+/* Theme: Light - Primary Variant */
+.theme-light.variant-primary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-light.variant-primary:hover:not(.disabled) {
+  border-color: #3a5cf3;
+}
+
+.theme-light.variant-primary.open {
+  border-color: #3a5cf3;
+}
+
+.theme-light.variant-primary .dropdown {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-light.variant-primary .option {
+  color: #000000;
+}
+
+.theme-light.variant-primary .option:hover {
+  background-color: #f0f7ff;
+}
+
+.theme-light.variant-primary .option.selected {
+  background-color: #dbeeff;
+  color: #3a5cf3;
+  font-weight: 600;
+}
+
+/* Theme: Light - Secondary Variant */
+.theme-light.variant-secondary {
+  background-color: #f2f2f2;
+  color: #000000;
+  border: 1px solid #f2f2f2;
+}
+
+.theme-light.variant-secondary:hover:not(.disabled) {
+  background-color: #e4e4e4;
+  border-color: #e4e4e4;
+}
+
+.theme-light.variant-secondary.open {
+  background-color: #e4e4e4;
+  border-color: #e4e4e4;
+}
+
+.theme-light.variant-secondary .dropdown {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-light.variant-secondary .option {
+  color: #000000;
+}
+
+.theme-light.variant-secondary .option:hover {
+  background-color: #f2f2f2;
+}
+
+.theme-light.variant-secondary .option.selected {
+  background-color: #e4e4e4;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Theme: Light - Tertiary Variant */
+.theme-light.variant-tertiary {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-light.variant-tertiary:hover:not(.disabled) {
+  background-color: #f2f2f2;
+  border-color: #d4d3d3;
+}
+
+.theme-light.variant-tertiary.open {
+  background-color: #f2f2f2;
+  border-color: #d4d3d3;
+}
+
+.theme-light.variant-tertiary .dropdown {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+}
+
+.theme-light.variant-tertiary .option {
+  color: #000000;
+}
+
+.theme-light.variant-tertiary .option:hover {
+  background-color: #f2f2f2;
+}
+
+.theme-light.variant-tertiary .option.selected {
+  background-color: #e4e4e4;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Theme: Dark - Primary Variant */
+.theme-dark.variant-primary {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-primary:hover:not(.disabled) {
+  border-color: #6da5fa;
+}
+
+.theme-dark.variant-primary.open {
+  border-color: #6da5fa;
+}
+
+.theme-dark.variant-primary .dropdown {
+  background-color: #1c1c1c;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-primary .option {
+  color: #ffffff;
+}
+
+.theme-dark.variant-primary .option:hover {
+  background-color: #333333;
+}
+
+.theme-dark.variant-primary .option.selected {
+  background-color: #333333;
+  color: #6da5fa;
+  font-weight: 600;
+}
+
+/* Theme: Dark - Secondary Variant */
+.theme-dark.variant-secondary {
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-secondary:hover:not(.disabled) {
+  background-color: #5f5f5f;
+  border-color: #5f5f5f;
+}
+
+.theme-dark.variant-secondary.open {
+  background-color: #5f5f5f;
+  border-color: #5f5f5f;
+}
+
+.theme-dark.variant-secondary .dropdown {
+  background-color: #1c1c1c;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-secondary .option {
+  color: #ffffff;
+}
+
+.theme-dark.variant-secondary .option:hover {
+  background-color: #333333;
+}
+
+.theme-dark.variant-secondary .option.selected {
+  background-color: #5f5f5f;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Theme: Dark - Tertiary Variant */
+.theme-dark.variant-tertiary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-tertiary:hover:not(.disabled) {
+  background-color: #1c1c1c;
+  border-color: #5f5f5f;
+}
+
+.theme-dark.variant-tertiary.open {
+  background-color: #1c1c1c;
+  border-color: #5f5f5f;
+}
+
+.theme-dark.variant-tertiary .dropdown {
+  background-color: #1c1c1c;
+  border: 1px solid #333333;
+}
+
+.theme-dark.variant-tertiary .option {
+  color: #ffffff;
+}
+
+.theme-dark.variant-tertiary .option:hover {
+  background-color: #333333;
+}
+
+.theme-dark.variant-tertiary .option.selected {
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Disabled State */
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Dropdown Size Adjustments */
+.size-small .option {
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.size-medium .option {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.size-large .option {
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
