@@ -55,7 +55,7 @@ export default function Diaries() {
         <Button
           variant="primary"
           size="medium"
-          theme="light"
+          theme="dark"
           onClick={handleWriteDiary}
           className={styles.writeButton}
         >
