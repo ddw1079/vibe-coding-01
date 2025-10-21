@@ -161,22 +161,9 @@
 
 .buttonClose {
   width: 104px;
-  background-color: var(--color-gray-white);
-  color: var(--color-gray-90);
-  border: 1px solid var(--color-gray-black);
-}
-
-.buttonClose:hover {
-  background-color: var(--color-gray-5);
 }
 
 .buttonSubmit {
   width: 104px;
-  background-color: var(--color-gray-black);
-  color: var(--color-gray-5);
-}
-
-.buttonSubmit:hover {
-  background-color: var(--color-gray-90);
 }
 
