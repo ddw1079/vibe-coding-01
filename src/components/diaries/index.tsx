@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import SelectBox from '@/commons/components/selectbox';
 import SearchBar from '@/commons/components/searchbar';
 import Button from '@/commons/components/button';
+import Pagination from '@/commons/components/pagination';
 import Image from 'next/image';
 import { EmotionType, getEmotionInfo } from '@/commons/constants/enum';
 import styles from './styles.module.css';
@@ -19,6 +20,8 @@ interface DiaryCard {
 export default function Diaries() {
   const [filterValue, setFilterValue] = useState('all');
   const [searchValue, setSearchValue] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 5;
 
   // 필터 옵션
   const filterOptions = [
@@ -143,7 +146,15 @@ export default function Diaries() {
       </div>
       <div className={styles.gap40} />
       <div className={styles.pagination}>
-        <span className={styles.placeholder}>pagination</span>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+          variant="primary"
+          size="medium"
+          theme="light"
+          maxVisiblePages={5}
+        />
       </div>
       <div className={styles.gap40} />
     </div>
