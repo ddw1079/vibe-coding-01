@@ -8,6 +8,7 @@ import Pagination from '@/commons/components/pagination';
 import Image from 'next/image';
 import { EmotionType, getEmotionInfo } from '@/commons/constants/enum';
 import styles from './styles.module.css';
+import { useDiaryModalLink } from './hooks/index.link.modal.hook';
 
 // 일기 카드 데이터 타입
 interface DiaryCard {
@@ -22,6 +23,9 @@ export default function Diaries() {
   const [searchValue, setSearchValue] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 5;
+  
+  // 모달 링크 hook
+  const { openWriteDiaryModal } = useDiaryModalLink();
 
   // 필터 옵션
   const filterOptions = [
@@ -51,7 +55,7 @@ export default function Diaries() {
 
   // 일기쓰기 버튼 클릭
   const handleWriteDiary = () => {
-    console.log('일기쓰기 클릭');
+    openWriteDiaryModal();
   };
 
   // 카드 삭제 버튼 클릭
@@ -60,7 +64,7 @@ export default function Diaries() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="diaries-container">
       <div className={styles.gap32} />
       <div className={styles.search}>
         <div className={styles.searchLeft}>
@@ -91,6 +95,7 @@ export default function Diaries() {
           theme="dark"
           onClick={handleWriteDiary}
           className={styles.writeButton}
+          data-testid="write-diary-button"
         >
           <Image
             src="/icons/plus_outline_light_m.svg"

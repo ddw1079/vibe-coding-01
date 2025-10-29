@@ -5,18 +5,21 @@ import styles from './styles.module.css';
 import { Input } from '@/commons/components/input';
 import { Button } from '@/commons/components/button';
 import { EmotionType, emotionList } from '@/commons/constants/enum';
+import { useModal } from '@/commons/providers/modal/modal.provider';
 
 export default function DiariesNew() {
   const [selectedEmotion, setSelectedEmotion] = useState<EmotionType | null>(null);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  
+  const { closeModal } = useModal();
 
   const handleEmotionChange = (emotion: EmotionType) => {
     setSelectedEmotion(emotion);
   };
 
   const handleClose = () => {
-    console.log('닫기');
+    closeModal();
   };
 
   const handleSubmit = () => {
@@ -26,7 +29,7 @@ export default function DiariesNew() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <h1 className={styles.headerTitle}>일기 쓰기</h1>
+        <h1 className={styles.headerTitle} data-testid="diary-modal-title">일기 쓰기</h1>
       </div>
       <div className={styles.gap40} />
       <div className={styles.emotionBox}>
@@ -82,6 +85,7 @@ export default function DiariesNew() {
           size="medium"
           onClick={handleClose}
           className={styles.buttonClose}
+          data-testid="diary-modal-close"
         >
           닫기
         </Button>
