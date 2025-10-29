@@ -185,8 +185,8 @@ export const getLayoutConfig = (path: string): LayoutConfig => {
       logo: true,
       darkModeToggle: false,
     },
-    banner: false,
-    navigation: false,
+    banner: true,
+    navigation: true,
     footer: true,
   };
 };
